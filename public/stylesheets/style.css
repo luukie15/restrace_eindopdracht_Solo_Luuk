@@ -1,0 +1,130 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	margin:0 0 .5em 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.row .col-sm-6{
+    width: 100%;
+}
+
+.search_data{
+    margin-bottom: 20px;
+}
+
+.container .jumbotron.text-center{
+    height: 400px;
+    overflow-y: scroll;
+    float: left;
+    width: 540px;
+}
+
+.row {
+    float: left;
+    width: 500px;
+}
+
+.row.not_first {
+    margin-left: 35px;
+}
+
+.row.not_first h2 {
+    margin-bottom: 20px;
+}
+
+.single_cafe_data{
+    height: 50px;
+    width: 100%;
+}
+
+.single_cafe{
+    width:325px;
+    float:left;
+}
+
+.btn_add_waypoint{
+    float:right;
+}
+
+.waypoint_row{
+    height: 50px;
+    width: 100%;
+}
+
+.single_waypoint{
+    //width:200px;
+    float:left; 
+}
+
+.btn_delete_waypoint{
+    float: right;
+}
+
+.container .jumbotron.text-center.waypoint_info{
+    height: 400px;
+    float:left;
+    width:450px;
+    margin-left:25px;
+}
+
+fieldset {
+    border:0;
+    padding:0; margin:0;
+}
+
+#wrapper {
+    padding-left:312px;
+    position:relative;
+}
+
+#raceList {
+    margin:0 0 30px 0;
+}
+#raceList table {
+    border-collapse:separate;
+    border-spacing:1px;
+    background:#CCC;
+}
+#raceList table th {
+    background:#EEE;
+    font-weight:600;
+    padding:10px 20px;
+    text-align:center;
+}
+#raceList table tbody {
+    padding:0; margin:0;
+    border-collapse:collapse;
+    border-spacing:0px;
+}
+#raceList table td {
+    background:#FFF;
+    padding:5px 10px;
+    text-align:center;
+}
+
+#raceInfo {
+    width:250px;
+    position:absolute;
+    top:0; left:0;
+}
+
+#raceInfo p {
+    padding:15px;
+    border:1px solid #CCC;
+    background:rgba(80,120,255,0.05);
+}
+
+#inputRaceName {
+    width: 250px;
+}
+
+#btnAddRace {
+    margin-top: 20px;
+}

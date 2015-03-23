@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <title>RestRace</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style>
+        body        { padding-top:80px; word-wrap:break-word; }
+    </style>
+</head>
+<body>
+<div class="container"> 
+    <% if(role === 'admin'){ %>
+        <button class='btn btn-warning btn-small btn_start_race' rel='<%= data[0]._id %>'>Start the race!</button>
+    <% } %>
+
+    <h1><label class='race_id_label' rel='<%= data[0]._id %>'>Race: <%= data[0].name %></label></h1>
+    <% if(role === 'admin'){ %>
+    <div class='row'>
+        <div class='search_data'>
+            Zoek een café: <input type='text' id='search_cafe' />
+            <button id='search_cafe_submit' class="btn btn-warning btn-md">Go!</button> 
+        </div>
+        <div class="jumbotron">
+            <div class='data_result'>
+            </div>
+        </div>
+    </div>
+    <% } %>
+    <div class='row not_first'>
+        <h2>Waypoints in deze race</h2>
+        <div class="jumbotron">
+            <div class="waypoints_of_race">
+
+            </div>
+        </div>
+    </div>
+    
+    <% if(role === 'admin'){ %>
+    <div class='row not_first'>
+        <h2>Gebruikers in deze race</h2>
+        <div class="jumbotron">
+            <div class="users_of_race">
+
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+<div class="jumbotron text-center waypoint_info waypoint_info_races">
+
+            <div class="row">
+                <div class="col-md-4">Place:</div>
+                <div class="col-md-16 place" id='place'></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">Rating:</div>
+                <div class="col-md-16 rating" id='rating'></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">Icon:</div>
+                <div class="col-md-16 icon" id='icon'></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">Types:</div>
+                <div class="col-md-16 types" id='types'></div>
+            </div>
+
+    </div>
+</div>
+
+<div class='enter_race'></div>
+<input type='hidden' id='userrole' value='<%= role %>' />
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+<script src='/javascripts/race_waypoints.js'></script>
+</body>
+</html>
